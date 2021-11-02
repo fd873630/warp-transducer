@@ -15,11 +15,17 @@ else:
 warp_rnnt_path = "../build"
 
 #if torch.cuda.is_available() or "CUDA_HOME" in os.environ:
+
+'''
 if torch.cuda.is_available():
     enable_gpu = True
 else:
     print("Torch was not built with CUDA support, not building GPU extensions.")
+    print("umm jun sik")
     enable_gpu = False
+'''
+
+enable_gpu = True
 
 if platform.system() == 'Darwin':
     lib_ext = ".dylib"
