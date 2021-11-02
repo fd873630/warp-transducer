@@ -14,7 +14,8 @@ else:
     extra_compile_args += ['-std=c++11']
 warp_rnnt_path = "../build"
 
-if torch.cuda.is_available() or "CUDA_HOME" in os.environ:
+#if torch.cuda.is_available() or "CUDA_HOME" in os.environ:
+if torch.cuda.is_available():
     enable_gpu = True
 else:
     print("Torch was not built with CUDA support, not building GPU extensions.")
